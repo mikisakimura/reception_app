@@ -7,10 +7,10 @@ from backend.api.serializers import StaffSerializer
 class ListView(generics.ListCreateAPIView):
     queryset = Staff.objects.all().order_by("-id")
     serializer_class = StaffSerializer
-    permission_classes = [IsAdminUserOrReadOnly]
+    # permission_classes = [IsAdminUserOrReadOnly]
 
 
 class DetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Staff.objects.all()
     serializer_class = StaffSerializer
-    permission_classes = [IsAdminUserOrReadOnly]
+    # permission_classes = [IsAdminUserOrReadOnly]
